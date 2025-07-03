@@ -1,6 +1,6 @@
 ﻿
 fun main() {
-    println(getInventory("Technology", "Smartphone"))
+    shop()
 }
 
 fun technologyProducts(): List<Product> {
@@ -31,3 +31,23 @@ fun getInventory(category: String, item: String): Double{
     return inventory[category]?.find { it.name == item }?.price ?: 0.0
 }
 
+
+fun shop(): Unit {
+    var running = true
+    val bank = Bank()
+    while(running){
+        println("Welcome to the shop!")
+        val input = readLine()
+        if(input == "n"){
+            running = false
+        }
+        else if(input != "y"){
+            println("Invalid input.")
+        }
+        else{
+            continue
+        }
+    }
+}
+
+fun rand
